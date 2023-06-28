@@ -1,0 +1,13 @@
+<h1>Listado de Documentales</h1>
+<br>
+<br>
+
+<div>
+    <%= link_to "Agregar un nuevo Documental", documentary_films_new_path, class: "btn btn-dark"%>
+</div>
+
+<% @documentary_films.each do |movie| %>
+    <h2>Nombre Documental: <%= movie.name%></h2>
+    <p>Sinopsis del Documental: <%= movie.synopsis%></p>
+    <p>Director del Documental: <%= movie.director%></p>
+<% end %>

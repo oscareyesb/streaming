@@ -1,0 +1,26 @@
+<h1 class="text-center">Crear Series</h1>
+<br>
+
+<div class= "d-flex justify-content-center">
+    <div class= "card col-6">
+        <%= form_with model: @seriee, method: :post do |form|%>
+            <div class="boder p-5 shadow">
+                <div class="mb-3">
+                    <%= form.label :name, "Nombre de la Serie:", class:"form-label"%>
+                    <%= form.text_field :name, class:"form-control" %>
+                </div>
+                <div class="mb-3">
+                    <%= form.label :synopsis, "Synopsis:", class:"form-label"%>
+                    <%= form.text_field :synopsis, class:"form-control" %>
+                </div>
+                <div class="mb-3">
+                    <%= form.label :director, "Nombre Director:", class:"form-label"%>
+                    <%= form.text_field :director, class:"form-control" %>
+                </div>
+                <div class="text-center">
+                    <%= form.submit "Enviar", class: "btn btn-dark"%>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

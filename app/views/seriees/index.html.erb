@@ -1,0 +1,13 @@
+<h1>Listado de Series</h1>
+<br>
+<br>
+
+<div>
+    <%= link_to "Agregar una nueva Serie", seriees_new_path, class: "btn btn-dark"%>
+</div>
+
+<% @seriees.each do |serie| %>
+    <h2>Nombre de la Serie: <%= serie.name%></h2>
+    <p>Sinopsis de la Serie: <%= serie.synopsis%></p>
+    <p>Director de la Serie: <%= serie.director%></p>
+<% end %>

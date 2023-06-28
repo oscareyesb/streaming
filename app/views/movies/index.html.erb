@@ -1,0 +1,13 @@
+<h1>Listado de Movies</h1>
+<br>
+<br>
+
+<div>
+    <%= link_to "Agregar una nueva pelicula", movies_new_path, class: "btn btn-dark"%>
+</div>
+
+<% @movies.each do |movie| %>
+    <h2>Nombre Pelicula: <%= movie.name%></h2>
+    <p>Sinopsis de la pelicula: <%= movie.synopsis%></p>
+    <p>Director de la Pelicula: <%= movie.director%></p>
+<% end %>
